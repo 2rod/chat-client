@@ -1,0 +1,89 @@
+body,p {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
+    margin:0;
+}
+
+h3 {
+    margin: 0;
+}
+
+h4 {
+    color: lightgray;
+    margin: 0;
+}
+
+header {
+    height : 3em;
+    background-color : lightgray;
+    text-align:center;
+    width:80%;
+    float:right;
+    padding: 1%;
+
+}
+#sidebar{
+    width:16%;
+    background-color:darkcyan;
+    float:left;
+    position:absolute;
+    top:0;
+    bottom:0;
+    padding:1%;
+    color: white;
+}
+
+.chatWindow {
+    position:absolute;
+    right:0;
+    top:4.8em;
+    bottom:0px;
+    background-color : #f9f8f8;
+    text-align:center;
+    width:80%;
+    float:right;
+    padding: 1%;
+}
+
+#messageBox {
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2em;
+    padding: 1%;
+    text-align:center;
+}
+.response {
+    margin-top: 10px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin:10px 0;
+    padding: 0 20px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+.channels {
+    margin: 25px 0;
+}
+
+.directMessages {
+
+}
+
+.userInfo {
+    height: 3em;
+}
+
+#textbox {
+    border : 1px lightgray solid;
+    border-radius: 5px;
+    width: 95%;
+    padding: 0.5% 0.5%;
+}
