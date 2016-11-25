@@ -4,7 +4,6 @@ function parseQuote (response) {
 
 function getQuote() {
   $.ajax({
-
     url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=parseQuote',
     type: 'GET',
     dataType: 'jsonp'
@@ -16,9 +15,4 @@ $(document).ready(function() {
     event.preventDefault();
     getQuote();
   });
-
-
-
-
 });
-
