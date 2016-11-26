@@ -14,7 +14,7 @@ h4 {
 }
 
 header {
-    height : 3em;
+    height : 5em;
     background-color : lightgray;
     text-align:center;
     width:80%;
@@ -34,15 +34,16 @@ header {
 }
 
 .chatWindow {
-    position:absolute;
-    right:0;
-    top:4.8em;
-    bottom:0px;
-    background-color : #f9f8f8;
+    position: absolute;
+    right: 0;
+    top: 6.3em;
+    bottom: 3.4em;
+    background-color: #f9f8f8;
     text-align:center;
-    width:80%;
-    float:right;
+    width: 80%;
+    float: right;
     padding: 1%;
+    overflow-y: scroll;
 }
 
 #messageBox {
@@ -53,11 +54,25 @@ header {
     height: 2em;
     padding: 1%;
     text-align:center;
+    background-color: #f9f8f8;
+    border-top: 1px solid lightgrey;
 }
-.response {
+.msg {
     margin-top: 10px;
+    text-align: left;
+    padding: 10px;
+    border: 1px lightgray solid;
+    border-radius: 10px;
+    width: 50%;
+    clear: both;
+    background-color: aliceblue;
+    float: right;
 }
 
+.userMsg {
+    background-color: lightyellow;
+    float: left;
+}
 
 ul {
     list-style-type: none;
