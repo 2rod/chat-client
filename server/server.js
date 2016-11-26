@@ -41,6 +41,7 @@ http.createServer(function (request, response) {
     } else if (request.url === '/messages' && request.method === 'GET') {
       response.writeHead(200, { 'Content-Type': 'application/json' });
       response.end(JSON.stringify(db.msgs));
+      console.log('db.msgs',db.msgs);
     } else {
 
       var extname = String(path.extname(filePath)).toLowerCase();

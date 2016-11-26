@@ -3,15 +3,15 @@ function parseQuote (response) {
   saveMessage('user2', response.quoteText, Date.now());
 }
 
-function getMessages (data) {
+function getMessages () {
   $.ajax({
     url: '/messages',
     method: 'GET',
     // data: JSON.stringify(),
     // dataType: 'json',
-    success: function (db) {
-      db.msgs.forEach(function (msg) {
-        renderMsg(msg);
+    success: function (msgs) {
+      msgs.forEach(function (msg) {
+        renderMsgJSON(msg);
       });
     },
     error: function(err) {
@@ -66,6 +66,7 @@ function getQuote() {
 }
 
 $(document).ready(function () {
+  getMessages();
   $('#target').submit(function (event) {
     event.preventDefault();
     let userText = $('#textbox').val();
