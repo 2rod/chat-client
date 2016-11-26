@@ -59,9 +59,6 @@ function getQuote() {
     url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=parseQuote',
     type: 'GET',
     dataType: 'jsonp',
-    success: function (data) {
-      // saveMessage(data.quoteText);
-    }
   });
 }
 
@@ -70,17 +67,13 @@ $(document).ready(function () {
   $('#target').submit(function (event) {
     event.preventDefault();
     let userText = $('#textbox').val();
-    if (userText) renderMsg(userText, 'userMsg');
-    $('#textbox').val('');
-    saveMessage('user1', userText, Date.now());
-    getQuote();
-    // chatDiv.scrollTop = chatDiv.scrollHeight;
-    // let height = chatDiv.scrollHeight;
-    // chatDiv.scrollTop = chatDiv.height();
-    // let chatDiv = document.getElementsByClassName('chatWindow')[0];
+    if (userText) {
+      renderMsg(userText, 'userMsg');
+      $('#textbox').val('');
+      saveMessage('user1', userText, Date.now());
+      getQuote();
+    }
     let chatDiv = $('.chatWindow');
     chatDiv.clientHeight = chatDiv.scrollHeight;
-    // chatDiv.scrollTop = $(".msg").last().offset().top;//chatDiv.scrollHeight;
-    // console.log('chatDiv height',chatDiv.height(),'chatDiv.scrollTop',chatDiv.scrollTop, 'chatDiv.scrollHeight', chatDiv.scrollHeight);
   });
 });

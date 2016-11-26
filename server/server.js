@@ -34,7 +34,7 @@ http.createServer(function (request, response) {
 
     if (request.url === '/messages' && request.method === 'POST') {
       request.on('end', function () {
-        console.log(db);
+        // console.log(db);
         db.msgs.push(request.body);
         response.end();
       });
@@ -63,7 +63,7 @@ http.createServer(function (request, response) {
           '.svg': 'application/image/svg+xml'
       };
 
-      contentType = mimeTypes[extname]; //|| 'application/octect-stream';
+      contentType = mimeTypes[extname];
 
       fs.readFile(filePath, function(error, content) {
           if (error) {
